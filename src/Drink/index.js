@@ -56,6 +56,18 @@ const Drink = (props)=> {
   return result;
 };*/
 
+
+const zmena2 = () => {
+  document.querySelector(".drink__cup").classList.toggle("drink__cup--selected");
+  if (Drinkdata.ordered===false) {
+    document.querySelector(".order-btn").textContent="Zrušit";
+    Drinkdata.ordered = true; 
+  } else {
+    document.querySelector(".order-btn").textContent="Objednat";
+    Drinkdata.ordered = false; 
+  }
+};
+
 //7.4 Zprovozněte tlačítko pro objedávání tak, aby veškerý kód byl součástí komponenty. V tomto případě se budeme muset zbavit globální proměnné ordered. Ke stejnému účelu však můžeme využít vlastnost ordered, která je obsažena v každém objektu nápoje. Tak zaručíme, že každý nápoj bude mít svoji vlastní informaci o tom, zde je objednaný či nikoliv.
 
 const Drink = (props)=> {
@@ -75,7 +87,9 @@ const Drink = (props)=> {
    </div>
     <div class="drink__controls">
     <button class="order-btn">Objednat</button>
-  </div>`;
+  </div>
+  `;
+
   return element;
 };
 
@@ -83,5 +97,10 @@ const Drink = (props)=> {
 
 const pridani=document.querySelector(".drinks-list");
 pridani.appendChild(Drink(Drinkdata));
+
+// 7.ukol: funkcni tlacitka
+const btnElm = document.querySelector(".order-btn");
+btnElm.addEventListener('click', zmena2());
+
 
 

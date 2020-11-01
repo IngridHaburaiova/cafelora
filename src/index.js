@@ -31,10 +31,10 @@ document.getElementById("nav-btn").addEventListener('click', () => {
 
 //4.2 Při opětovném kliknutí na tlačítko chceme zařídit, aby se objednávka zrušila a nápis na tlačítku se vrátil zpět na Objednat. Tohoto můžete docílit například tak, že si vytvoříte globální proměnnou ordered, která bude obsahovat true nebo false podle toho, zde je nápoj objednaný či nikoliv.
 
-/*
-let ordered=true;
-*/
-const zmena = (ordered) => {
+
+let ordered=false;
+
+const zmena = () => {
   document.querySelector(".drink__cup").classList.toggle("drink__cup--selected");
   if (ordered===true) {
     document.querySelector(".order-btn").textContent="Zrušit";
