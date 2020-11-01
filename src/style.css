@@ -248,6 +248,20 @@ nav a:hover {
   background-attachment: fixed;
 }
 
+.textgallery {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  font-style: italic;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20vh;
+   }
+
+.gallerycafe{
+  display: block;
+}
 .contacts {
   margin-bottom: 4rem;
 
