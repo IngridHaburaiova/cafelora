@@ -2,6 +2,7 @@ import './index.html';
 import './style.css';
 import './Layer/index.js';
 import './Layer/style.css';
+import './Drink/index.js';
 
 console.log('funguju!');
 
@@ -30,9 +31,10 @@ document.getElementById("nav-btn").addEventListener('click', () => {
 
 //4.2 Při opětovném kliknutí na tlačítko chceme zařídit, aby se objednávka zrušila a nápis na tlačítku se vrátil zpět na Objednat. Tohoto můžete docílit například tak, že si vytvoříte globální proměnnou ordered, která bude obsahovat true nebo false podle toho, zde je nápoj objednaný či nikoliv.
 
-
+/*
 let ordered=true;
-const zmena = () => {
+*/
+const zmena = (ordered) => {
   document.querySelector(".drink__cup").classList.toggle("drink__cup--selected");
   if (ordered===true) {
     document.querySelector(".order-btn").textContent="Zrušit";
@@ -45,5 +47,28 @@ const zmena = () => {
 
 document.querySelector(".order-btn").addEventListener('click', zmena);
 
+//6.1 Uvnitř hlavního index.js si vytvořte následujicí globální proměnnou.
 
- 
+const layers = [
+  {
+    color: '#feeeca',
+    label: 'mléčná pěna',
+  },
+  {
+    color: '#fed7b0',
+    label: 'teplé mléko',
+  },
+  {
+    color: '#613916',
+    label: 'espresso',
+  },
+];
+
+//6.2 Použijte cyklus for nebo forEach, projděte seznam ingrediencí položku po položce a pomocí komponenty Layer je zobrazte každou ingredienci na stránce.
+
+/*
+layers.forEach((color,label)=> {
+  console.log (layers.Laye);
+});*/
+
+

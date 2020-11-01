@@ -7,17 +7,13 @@
 //  }
  // Komponenta nechť vrací řetězec obsahující výsledné HTML.
 
- const Layer = (props)=> {
+ export const Layer = (props)=> {
   let result='';
   for (let i = 0; i < props.length; i ++) {
     result += `<div class="layer">
-    <div
-    class="layer__color"
-    style="background-color: ${props[i].color}"
-  ></div>
-  <div class="layer__label">${props[i].label}</div>
-  </div>
-  </div>`
+    <div class="layer__color" style="background-color: ${props[i].color}" ></div>
+    <div class="layer__label">${props[i].label}</div>
+    </div>`
   }
   return result;
 };
